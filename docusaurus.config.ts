@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Crease',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Crease is a responsive React component library powered by Tailwind CSS, designed to easily implement various types of interactive quizzes.',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
