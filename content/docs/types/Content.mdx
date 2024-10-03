@@ -1,0 +1,23 @@
+---
+title: Content
+---
+
+import { TypeTable } from 'fumadocs-ui/components/type-table';
+ 
+## Fields
+<TypeTable
+  type={{
+    question: {
+      type: 'string',
+    },
+    options: {
+      type: 'string[]',
+    },
+    correctAnswerIndex: {
+      type: 'number'
+    }
+  }}
+/>
+
+## More information
+`correctAnswerIndex`: The index (0-based) of the correct answer within the `options` array.

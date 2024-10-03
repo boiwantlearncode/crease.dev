@@ -1,3 +1,37 @@
 ---
 title: Quiz
 ---
+import { TypeTable } from 'fumadocs-ui/components/type-table';
+import Link from 'next/link';
+
+## Props
+Quiz can be typed as `QuizProps` which contains all of the following fields.
+<TypeTable
+  type={{
+    theme: {
+      type: '"light" | "dark"',
+    },
+    shuffle: {
+      description: '(Optional) Whether to randomize the order of the questions.',
+      type: 'boolean',
+      default: 'false'
+    },
+    format: {
+      type: '"single-answer" | "multiple-answers" | "categorical"'
+    },
+    content: {
+      type: 'NonEmptyArray<Content>',
+    }
+
+  }}
+/>
+
+## More information
+
+- `theme`: Sets the color scheme of component.
+- `shuffle`: (Optional) Whether to randomize the order of the questions.
+- `format`: Specifies the type of questions
+   * `single-answer`: One correct answer from multiple choices.
+   * `multiple-answers`: Multiple correct answers.
+   * `categorical`: A personality-test style with categorical answers.
+- `content`: Refer to <Link href="/docs/types/Content">`Content`</Link>
