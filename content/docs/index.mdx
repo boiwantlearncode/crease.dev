@@ -3,9 +3,15 @@ title: Overview
 ---
 import { Banner } from 'fumadocs-ui/components/banner';
 import GithubLink from '@/app/components/GithubLink';
- 
-<Banner className="rounded-lg bg-gradient-to-r from-red-800 to-orange-700 italic text-red-100">This project is still in its very early stages. Please do contact me for any help, feedback and requests.</Banner>
-<GithubLink link='https://github.com/boiwantlearncode/crease' className='mt-4'/>
+import VersionTag from '@/app/components/VersionTag';
+
+<div className='flex items-center gap-x-2'>
+  <GithubLink link='https://www.github.com/boiwantlearncode/crease' className='w-6 h-6' />
+  <VersionTag version="v0.1.2" />
+</div>
+<Callout type='info' className='mt-4'>
+This project is still in its very early stages. Please do contact me for any help, feedback or request.
+</Callout>
 
 
 ## Features
