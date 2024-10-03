@@ -1,0 +1,105 @@
+---
+title: Getting Started
+---
+
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+import { Step, Steps } from 'fumadocs-ui/components/steps';
+
+
+## Installation
+Install `@crease/react` with any one of the following commands: 
+<Tabs items={['npm', 'yarn']}>
+  <Tab value="npm">
+    ```bash
+    npm i @crease/react
+    ```
+  </Tab>
+  <Tab value="yarn">
+    ```bash
+    yarn add @crease/react
+    ```
+  </Tab>
+</Tabs>
+
+
+## Basic Usage
+
+Let's implement a simple <em>true or false</em> quiz.
+
+<Steps>
+<Step>
+#### Import `Quiz` component
+Additionally, for typescript users, import the types
+
+```tsx title="App.tsx"
+import { Quiz } from '@crease/react';
+import type { Content, NonEmptyArray } from '@crease/react'; // Typescript only
+```
+</Step>
+
+<Step>
+#### Instantiate the content variable
+The content variable contains all the questions, options and correct answers
+
+```tsx title="App.tsx"
+const content: NonEmptyArray<Content> = [
+  {
+    question: "Is 1+1=2?",
+    options: [
+      "True",
+      "False"
+    ],
+    correctAnswerIndex: 0 // Index of the correct answer within the options array.
+  },    
+  {
+    question: "Are there more atoms in the universe than pigeons?",
+    options: [
+      "True",
+      "False"
+    ],
+    correctAnswerIndex: 0 // Index of the correct answer within the options array.
+  }
+]
+```
+</Step>
+
+<Step>
+#### What your code should look like
+
+```tsx title="App.tsx"
+import { Quiz } from '@crease/react';
+import type { Content, NonEmptyArray } from '@crease/react';
+
+const content: NonEmptyArray<Content> = [
+  {
+    question: "Is 1+1=2?",
+    options: [
+      "True",
+      "False"
+    ],
+    correctAnswerIndex: 0 // Index of the correct answer within the options array.
+  },    
+  {
+    question: "Are there more atoms in the universe than pigeons?",
+    options: [
+      "True",
+      "False"
+    ],
+    correctAnswerIndex: 0 // Index of the correct answer within the options array.
+  }
+]
+
+function App() {
+  return (
+    <Quiz
+        theme='dark' 
+        shuffle={true} // Order of questions displayed will be random
+        format='single-answer' // Only one option is correct
+        content={content}
+    />
+  )
+}
+```
+</Step>
+
+</Steps>

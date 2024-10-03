@@ -1,0 +1,13 @@
+{
+  "title": "ui",
+  "root": true,
+  "pages": [
+    "---Guide---",
+    "index",
+    "getting-started",
+    "roadmap",
+    "---API References---",
+    "components",
+    "types"
+  ]
+}
