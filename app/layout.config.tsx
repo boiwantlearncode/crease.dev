@@ -8,6 +8,7 @@ import { type HomeLayoutProps } from 'fumadocs-ui/home-layout';
  * Docs Layout: app/docs/layout.tsx
  */
 export const baseOptions: HomeLayoutProps = {
+  githubUrl: 'https://www.github.com/boiwantlearncode/crease',
   nav: {
     title: 'Crease',
   },
