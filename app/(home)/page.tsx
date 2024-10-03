@@ -17,7 +17,7 @@ export default function HomePage() {
         <VersionTag version="v0.1.2" />
       </div>
       <div className='flex flex-col justify-center items-center'>
-        <h3 className='w-1/2 text-lg text-muted-foreground'>Crease is a responsive React component library powered by <span className='text-foreground'>Tailwind CSS</span> built for implementing various types of interactive quizzes with ease.</h3>
+        <h3 className='lg:w-1/2 w-full text-lg text-muted-foreground'>Crease is a responsive React component library powered by <span className='text-foreground'>Tailwind CSS</span> built for implementing various types of interactive quizzes with ease.</h3>
         <Link href="/docs" className='z-10 my-4 flex items-center justify-center'>
           <ShimmerButton className="shadow-2xl">
             <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
