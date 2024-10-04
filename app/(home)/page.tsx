@@ -2,7 +2,6 @@ import Link from 'fumadocs-core/link';
 import ShimmerButton from "@/components/ui/shimmer-button";
 import VersionTag from '@/app/components/VersionTag';
 import HomeBackground from '@/app/components/HomeBackground';
-import GithubLink from '@/app/components/GithubLink';
 
 
 // Insert function that pulls the latest version from npmjs
@@ -13,7 +12,7 @@ export default function HomePage() {
     <HomeBackground className='h-screen gap-12 text-center'>
       <div className='flex flex-col justify-center items-center'>
         <h1 className="text-4xl font-bold inline-block">Crease</h1>
-        <VersionTag version="v0.1.2" containerClassName='my-4' />
+        <VersionTag version="v0.2.0" containerClassName='my-4' />
       </div>
       <div className='flex flex-col justify-center items-center'>
         <h3 className='lg:w-1/2 w-full text-lg text-muted-foreground'>Crease is a responsive React component library powered by <span className='text-foreground'>Tailwind CSS</span> built for implementing various types of interactive quizzes with ease.</h3>

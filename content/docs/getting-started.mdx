@@ -33,7 +33,7 @@ Additionally, for typescript users, import the types
 
 ```tsx title="App.tsx"
 import { Quiz } from '@crease/react';
-import type { Content, NonEmptyArray } from '@crease/react'; // Typescript only
+import type { MixedContent, NonEmptyArray } from '@crease/react';
 ```
 </Step>
 
@@ -42,22 +42,30 @@ import type { Content, NonEmptyArray } from '@crease/react'; // Typescript only
 The content variable contains all the questions, options and correct answers
 
 ```tsx title="App.tsx"
-const content: NonEmptyArray<Content> = [
+const content: NonEmptyArray<MixedContent> = [
   {
+    format: "single-answer",
     question: "Is 1+1=2?",
     options: [
       "True",
       "False"
     ],
-    correctAnswerIndex: 0 // Index of the correct answer within the options array.
+    correctAnswers: 0 // Index of the correct answer within the options array.
   },    
   {
+    format: "single-answer",
     question: "Are there more atoms in the universe than pigeons?",
     options: [
       "True",
       "False"
     ],
-    correctAnswerIndex: 0 // Index of the correct answer within the options array.
+    correctAnswers: 0
+  },
+  {
+    format: "multiple-answers",
+    question: "Which of these are prime numbers?",
+    options: ["-2", "7", "3", "1"],
+    correctAnswers: [1, 2] // has to be an array of indexes for "multiple-answers" format
   }
 ]
 ```
@@ -68,34 +76,41 @@ const content: NonEmptyArray<Content> = [
 
 ```tsx title="App.tsx"
 import { Quiz } from '@crease/react';
-import type { Content, NonEmptyArray } from '@crease/react';
+import type { MixedContent, NonEmptyArray } from '@crease/react';
 
-const content: NonEmptyArray<Content> = [
+const content: NonEmptyArray<MixedContent> = [
   {
+    format: "single-answer",
     question: "Is 1+1=2?",
     options: [
       "True",
       "False"
     ],
-    correctAnswerIndex: 0 // Index of the correct answer within the options array.
+    correctAnswers: 0 // Index of the correct answer within the options array.
   },    
   {
+    format: "single-answer",
     question: "Are there more atoms in the universe than pigeons?",
     options: [
       "True",
       "False"
     ],
-    correctAnswerIndex: 0 // Index of the correct answer within the options array.
+    correctAnswers: 0
+  },
+  {
+    format: "multiple-answers",
+    question: "Which of these are prime numbers?",
+    options: ["-2", "7", "3", "1"],
+    correctAnswers: [1, 2] // has to be an array of indexes for "multiple-answers" format
   }
 ]
 
 function App() {
   return (
     <Quiz
-        theme='dark' 
-        shuffle={true} // Order of questions displayed will be random
-        format='single-answer' // Only one option is correct
-        content={content}
+      theme='dark' 
+      shuffle={true} // Order of questions displayed will be random
+      content={content}
     />
   )
 }

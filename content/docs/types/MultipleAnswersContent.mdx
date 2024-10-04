@@ -1,0 +1,45 @@
+---
+title: MultipleAnswersContent
+---
+import { TypeTable } from 'fumadocs-ui/components/type-table';
+ 
+Will accept multiple correct answers from multiple choices.
+
+## Fields
+<TypeTable
+  type={{
+    format: {
+      type: 'multiple-answers',
+    },
+    question: {
+      type: 'string',
+    },
+    options: {
+      type: 'string[]',
+    },
+    correctAnswers: {
+      type: 'number[]'
+    }
+  }}
+/>
+
+## Example
+```ts
+const content: NonEmptyArray<MultipleAnswersContent> = [
+  {
+    format: "multiple-answers",
+    question: "Which of these are prime numbers?",
+    options: ["-2", "7", "3", "1"],
+    correctAnswers: [1, 2]
+  },
+  {
+    format: "multiple-answers",
+    question: "Which of these are odd numbers?",
+    options: ["-2", "7", "3", "1"],
+    correctAnswers: [1, 2, 3]
+  }
+]
+```
+
+## More information
+`correctAnswers`: The index (0-based) of the correct answer within the `options` array.

@@ -1,0 +1,49 @@
+---
+title: SingleAnswerContent
+---
+import { TypeTable } from 'fumadocs-ui/components/type-table';
+
+Will only accept one correct answer from multiple choices.
+ 
+## Fields
+<TypeTable
+  type={{
+    format: {
+      type: 'single-answer',
+    },
+    question: {
+      type: 'string',
+    },
+    options: {
+      type: 'string[]',
+    },
+    correctAnswers: {
+      type: 'number'
+    }
+  }}
+/>
+
+
+## Example
+```ts
+const content: NonEmptyArray<SingleAnswerContent> = [
+  {
+    format: "single-answer",
+    question: "Is the sky blue?",
+    options: [
+      "Yes",
+      "No"
+    ],
+    correctAnswers: 0
+  },
+  {
+    format: "single-answer",
+    question: "Is the earth flat?",
+    options: [
+      "Yes",
+      "No"
+    ],
+    correctAnswers: 1
+  }
+]
+```

@@ -4,37 +4,15 @@ title: Roadmap
 
 ## Upcoming updates
 
-#### Additional props for `Quiz`: `className?`, `styles?`
+#### <span className='text-yellow-200'>Styling and class styling for subcomponents of `Quiz` instead of just the parent container.</span>
+- `Options` are displayed in a straight column rather than 2x2.
+- `Question` is displayed in a different font size and color.
 
-Each receives an object that allows modification of 3 types within the quiz.
+#### <span className='text-yellow-200'>New quiz formats</span>
+- `Quiz` will in the future support only test formats that have correct answers.
+- `Questionnaire` will be introduced to support formats that do not have correct answers, e.g. personality tests, matrix.
 
-```ts
-type className = {
-  container: string;
-  question: string;
-  options: string;
-}
-
-
-type styles = {
-  container: React.CSSProperties;
-  question: React.CSSProperties;
-  options: React.CSSProperties;
-}
-```
-
-Examples of customization e.g. options are displayed in a straight column rather than 2x2.
-
-#### New quiz format
-```ts
-"multiple-answers" | "categorical" | "mixed" 
-
-// "multiple-answers": more than one possible correct answer
-// "categorical" (personality tests): no correct answer; each option corresponds to a category and adds to a group-based score
-// "mixed": each question can be of any format
-```
-
-#### Templates (starter-kit) 
+#### <span className='text-yellow-200'>Templates (starter-kit)</span>
 
 Create a `true-false` quiz using `single-answer` format
 

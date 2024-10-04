@@ -8,6 +8,19 @@ import Link from 'fumadocs-core/link';
 Quiz can be typed as `QuizProps` which contains all of the following fields.
 <TypeTable
   type={{
+    content: {
+      type: 'NonEmptyArray<MixedContent>',
+    },
+    className: {
+      type: 'React.CSSProperties',
+      description: '(Optional) Additional customized class names to be applied to the component.',
+      default: 'null'
+    },
+    style: {
+      type: 'React.CSSProperties',
+      description: '(Optional) Additional customized styles to be applied to the component.',
+      default: 'null'
+    },
     theme: {
       type: '"light" | "dark"',
     },
@@ -15,23 +28,14 @@ Quiz can be typed as `QuizProps` which contains all of the following fields.
       description: '(Optional) Whether to randomize the order of the questions.',
       type: 'boolean',
       default: 'false'
-    },
-    format: {
-      type: '"single-answer" | "multiple-answers" | "categorical"'
-    },
-    content: {
-      type: 'NonEmptyArray<Content>',
     }
-
   }}
 />
 
 ## More information
 
+- `content`: Refer to <Link href="/docs/types/MixedContent">`MixedContent`</Link>
+- `className`: (Optional) Additional customized class names to be applied to the component.
+- `style`: (Optional) Additional customized styles to be applied to the component.
 - `theme`: Sets the color scheme of component.
 - `shuffle`: (Optional) Whether to randomize the order of the questions.
-- `format`: Specifies the type of questions
-   * `single-answer`: One correct answer from multiple choices.
-   * `multiple-answers`: Multiple correct answers.
-   * `categorical`: A personality-test style with categorical answers.
-- `content`: Refer to <Link href="/docs/types/Content">`Content`</Link>
